@@ -32,6 +32,7 @@
 
   <h2>1. Basic principles</h2>
   <p>The App is designed to be usable without registering an account (no name, email address or similar is required). Habit data (habit names, icons, streak counts, personal bests and the like, the "Habit Data") is in principle stored locally on the device. The App may make incidental use of the backup facilities built into the operating system (iCloud / Google account), but these are mechanisms provided by the respective operating systems and are not data we collect directly.</p>
+  <p>On iOS and iPadOS, where the User is signed in to iCloud, the App stores Habit Data in the User's own private area of Apple's iCloud (CloudKit) in order to sync it between devices signed in to the same Apple Account (section 2.4). The stored content is encrypted on the device, and we cannot access it.</p>
   <p>Only where a User wishes to transfer their data to a new device do we temporarily store data on an external cloud service (Google Firebase), by means of the "transfer code" feature described below.</p>
 
   <h2>2. Information we obtain</h2>
@@ -75,6 +76,13 @@
   <h3>2.3 Information relating to purchases</h3>
   <p>In-app purchases (the Light Plan, the Full Plan and the additional theme colours) are processed through the payment systems of the Apple App Store or Google Play. We do not directly obtain or store payment information such as credit card numbers. We confirm whether a purchase has completed through the purchase-verification mechanisms provided by each platform. However, when data is transferred to a new device (section 2.1), we do not re-verify purchase receipts; the purchase status is copied from the original device as it is.</p>
 
+  <h3>2.4 Information stored for iCloud sync (iOS and iPadOS)</h3>
+  <ul>
+    <li>Habit Data (for each habit: habit name, icon, reminder time, date and time of registration, the record of days completed, personal best, and update times used for syncing)</li>
+    <li>The order of habits, and the characters unlocked</li>
+  </ul>
+  <p>Purchase status and app settings are not synced. If the User signs out of iCloud or switches to a different Apple Account, the App deletes the Habit Data and the unlocked characters from that device (purchase status and settings remain).</p>
+
   <h2>3. Purposes for which information is used</h2>
   <p>We use the information we obtain solely for the following purposes.</p>
   <ol>
@@ -95,6 +103,7 @@
   <ul>
     <li>Temporary data stored when a transfer code is issued (2.1): deleted when the transfer completes, or when a new code is issued from the same device. If neither happens, the code expires 24 hours after issue but the data is not deleted and remains</li>
     <li>Local data on the device: retained until the User uninstalls the App or deletes it within the App</li>
+    <li>Synced data in iCloud (2.4): stored in the User's own iCloud. It can be deleted with "Delete iCloud data" on the App's settings screen</li>
   </ul>
 
   <h2>6. Rights of users</h2>
@@ -102,6 +111,7 @@
     <li>The User may disable the App's notification permission and advertising personalisation settings at any time from the device settings</li>
     <li>Users in the regions described in "2.2 Information obtained automatically (for serving advertisements)" may change their consent or opt-out choice at any time from "Advertising consent settings" on the App's settings screen</li>
     <li>The User may delete the local data on the device by uninstalling the App</li>
+    <li>On iOS and iPadOS, the User may delete the synced data in iCloud, together with the Habit Data on that device, with "Delete iCloud data" on the App's settings screen</li>
     <li>Where a transfer code has been issued, that code expires automatically after 24 hours, after which it can no longer be used to gain access</li>
   </ul>
 
